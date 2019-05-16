@@ -605,8 +605,8 @@ void* train_transe(void *con) {
 */
 
 void out_transe(string iter = "") {
-		FILE* f2 = fopen((outPath + "relation2vec" + iter + ".bern_me1").c_str(), "w");
-		FILE* f3 = fopen((outPath + "entity2vec" + iter + ".bern_me1").c_str(), "w");
+		FILE* f2 = fopen((outPath + "relation2vec" + iter + ".bern_me2").c_str(), "w");
+		FILE* f3 = fopen((outPath + "entity2vec" + iter + ".bern_me2").c_str(), "w");
 		for (int i=0; i < relationTotal; i++) {
 			int last = dimension * i;
 			for (int ii = 0; ii < dimension; ii++)
