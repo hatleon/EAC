@@ -578,7 +578,7 @@ void* train_transe(void *con) {
 	transeBatch = transeLen / nbatches;
 	next_random = (unsigned long long *)calloc(transeThreads, sizeof(unsigned long long));
 	for (int epoch = 0; epoch < transeTrainTimes; epoch++) {
-		if(epoch > 999 && epoch % 10000 == 0){
+		if(epoch > 99 && epoch % 300 == 0){
 			do_combine();
 		}
 		res = 0;
@@ -628,7 +628,6 @@ void out_transe(string iter = "") {
 */
 
 int main() {
-	srand(19961022);
 	init();
 	train_transe(NULL);
 	out_transe();
